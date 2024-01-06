@@ -1,14 +1,13 @@
 const faqHeaders = document.querySelectorAll(".faq-header");
 
 const toggleOpenFAQBody = function () {
-  document.activeElement.blur();
-
   faqHeaders.forEach((header) => {
     let thisHeader = header.parentNode;
+    let thisHeaderChild = thisHeader.firstElementChild;
     if (thisHeader !== this.parentNode) {
-      thisHeader.firstElementChild.classList.remove("faq-header-active");
+      thisHeaderChild.classList.remove("faq-header-active");
     } else {
-      thisHeader.firstElementChild.classList.toggle("faq-header-active");
+      thisHeaderChild.classList.toggle("faq-header-active");
     }
   });
 };
