@@ -72,6 +72,8 @@ body {
 
 /* header for individual FAQs */
 .faq-header {
+  border: none;
+  background: none;
   font-size: 2.4rem;
   font-weight: 600;
   display: flex;
