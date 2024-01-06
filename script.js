@@ -1,6 +1,8 @@
 const faqHeaders = document.querySelectorAll(".faq-header");
 
 const toggleOpenFAQBody = function () {
+  document.activeElement.blur();
+
   faqHeaders.forEach((header) => {
     let thisHeader = header.parentNode;
     if (thisHeader !== this.parentNode) {
@@ -14,5 +16,3 @@ const toggleOpenFAQBody = function () {
 faqHeaders.forEach((header) => {
   header.addEventListener("click", toggleOpenFAQBody);
 });
-
-document.activeElement.blur();
