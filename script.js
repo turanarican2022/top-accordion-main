@@ -14,3 +14,5 @@ const toggleOpenFAQBody = function () {
 faqHeaders.forEach((header) => {
   header.addEventListener("click", toggleOpenFAQBody);
 });
+
+document.activeElement.blur();
