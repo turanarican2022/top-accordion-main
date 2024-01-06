@@ -116,3 +116,15 @@ body {
     background-repeat: no-repeat;
   }
 }
+
+/*********************************/
+/* TABLET SIZE - 576PX ***********/
+/*********************************/
+
+/* make text smaller on mobile */
+
+@media(max-width:576px) {
+  html {
+    font-size: 46.875%;
+  }
+}
