@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Wraps all the page, it is flex */
+.container {
+  max-width: 1440px;
+  min-height: 100svh;
+  margin: 0 auto;
+  background: url("assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.6rem
+}
+
+/* Wraps the accordion component in the center */
+.faq-component-container {
+  width: 80%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, .3);
+  border-radius: 1.8rem;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem
+}
+
+/* for the top-most FAQ title and star beneath it */
+.faq-component-title-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 2.4rem;
+}
+
+.faq-component-title-container h1 {
+  font-size: 4.8rem;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+/* wrapper for individuals FQAs*/
+.faq {
+  border-top: 1px solid hsl(276, 59%, 88%);
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  padding-top: .8rem;
+}
+
+.faq:first-child {
+  border: none;
+}
+
+/* header for individual FAQs */
+.faq-header {
+  font-size: 2.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.faq-header:hover {
+  color: hsl(293, 56%, 44%);
+}
+
+.faq-header::after {
+  content: url("assets/images/icon-plus.svg");
+}
+
+.faq-header-active::after {
+  content: url("assets/images/icon-minus.svg");
+}
+
+/* body text of individual FAQs */
+.faq-body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: hsl(292, 16%, 49%);
+  height: 0;
+  overflow: hidden;
+}
+
+.faq-header-active+.faq-body {
+  height: auto;
+}
+
+/*********************************/
+/* PHONE SIZE - 375PX ************/
+/*********************************/
+
+@media (max-width:375px) {
+  .container {
+    background: url("assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
